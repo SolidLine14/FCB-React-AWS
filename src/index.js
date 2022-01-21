@@ -3,14 +3,33 @@ import React from "react"
 import ReactDOM from "react-dom"
 import "./index.css"
 
-function TasksList() {
-  return (
-    <ul>
-      <li className="tasks-item">Follow Edukasyon.ph on Facebook.</li>
-      <li className="tasks-item">Follow AWS Siklab Pilipinas on Facebook.</li>
-      <li className="tasks-item">Follow Zuitt Coding Bootcamp on Facebook.</li>
-    </ul>
-  );
+function Task (props) {
+	return (
+		<li className="tasks-item">{props.taskName}</li>
+	)
+}
+
+
+function TasksList () {
+
+	const taskItemList = [
+		"Follow Edukasyon.ph on Facebook.",
+		"Follow AWS Siklab Pilipinas on Facebook.",
+		"Follow Zuitt Coding Bootcamp on Facebook.",
+		"Follow Zuitt Coding Bootcamp on Youtube."
+	]
+	return (
+		<div>
+			<input className="task-input" />
+			<ul>
+				{
+					taskItemList.map((task, index) => {
+						return <Task key={index} taskName={task} />
+					})
+				}
+			</ul>
+		</div>
+	)
 }
 
 
