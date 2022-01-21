@@ -9,22 +9,13 @@ import TasksList from  "./components/TasksList"
 function App () {
 
 	return (
-
 		<div className="app">
-
 			<header className="app-header">
-
 				<h1>My Amazing To Do List App</h1>
-
 				<p>The most simple and amazing todo-list React app.</p>
-
-
 		  		<TasksList/>
-
 			</header>
-
 		</div>	
-
 		);
 
 }
